@@ -5,7 +5,8 @@ from pathlib import Path
 
 BASE_URL = "https://files.grouplens.org/datasets/movielens"
 ZIP_NAME = "ml-32m.zip"
-RAW_DIR = Path(__file__).resolve().parent.parent / "data" / "raw"
+ROOT = Path(__file__).resolve().parent.parent
+RAW_DIR = ROOT / "data" / "raw"
 
 
 def md5sum(path: Path, chunk_size: int = 1 << 20) -> str:
@@ -48,7 +49,7 @@ def main() -> None:
     zip_path = RAW_DIR / ZIP_NAME
 
     if (extracted / "ratings.csv").exists():
-        print("Dataset already in", extracted)
+        print("Dataset already in", extracted.relative_to(ROOT))
         return
 
     if not zip_path.exists():
@@ -73,7 +74,7 @@ def main() -> None:
         zf.extractall(RAW_DIR)
 
     zip_path.unlink()
-    print("Ready:", extracted)
+    print("Ready:", extracted.relative_to(ROOT))
 
 
 if __name__ == "__main__":
