@@ -1,0 +1,7 @@
+pandas>=3.0
+numpy
+matplotlib
+pyarrow
+jupyterlab
+tqdm
+requests
