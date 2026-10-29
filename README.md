@@ -1,7 +1,5 @@
 # MovieLens 32M Analysis
 
-## 1. Introduction
-
 Data cleaning and exploratory analysis project built on the **MovieLens 32M** dataset. It covers downloading and verifying the data, a documented cleaning pipeline, exploratory analysis, and the generation of aggregate tables for a dashboard.
 
 ### Data source
