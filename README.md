@@ -30,7 +30,7 @@ F. Maxwell Harper and Joseph A. Konstan. *The MovieLens Datasets: History and Co
 ## 2. Directory structure
 
 ```
-movielens/
+movielens-analysis/
 |-- .gitignore
 |-- README.md
 |-- requirements.txt
